@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display:flex;
+    justify-content: center  ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #575757;
+}
+.vechungtoi {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.section {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.section h2 {
+    color: #8B0000;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.section img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+.section .dinhdang {
+    padding: 20px;
+}
+.section .dinhdang p {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+.dinhdanganh{
+    width: 100px;
+    height: 80px;
+}

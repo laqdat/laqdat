@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px;
+}
+header {
+    background-color: bisque;
+    color:#f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display:flex;
+    justify-content: center  ;
+}
+nav, .header, .section, .faq, .business-solutions{
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+nav a:hover {
+    background-color: #b51f24;
+}
+.header img {
+    width: 100%;
+    border-radius: 8px;
+}
+.section h2, .faq h2, .business-solutions h2, header h1 {
+    color: #b51f24;
+}
+.card-options {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card-options img {
+    width: 23%;
+    margin: 1%;
+    border-radius: 8px;
+}
+.section input[type="text"], .section input[type="email"], .section input[type="tel"], .section textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.section input[type="checkbox"] {
+    margin-right: 10px;
+}
+.section button {
+    background-color: #b51f24;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.section button:hover {
+    background-color: #a41c21;
+}
+.faq h3, .faq p {
+    text-align: left;
+}
+.business-solutions img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.business-solutions button {
+    background-color: #b51f24;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.business-solutions button:hover {
+    background-color: #a41c21;
+}
+.dinhdanganh{
+    width: 100px;
+    height: 80px;
+    margin-left:15px;
+}
+.three-steps {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.three-steps h2 {
+    color: #b51f24;
+    margin-bottom: 20px;
+}
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.step {
+    text-align: center;
+    margin: 10px;
+}
+.step img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.step p {
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
