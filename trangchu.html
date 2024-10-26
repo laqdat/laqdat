@@ -5,46 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highlands Coffee</title>
     <link rel="stylesheet" type="text/css" href="css/dinhdang.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img class="dinhdanganh" src="media/highlands-coffee-cream-logo.webp" alt="Highland Coffee Logo">
-        <h1>HIGHLANDS COFFEE</h1>
+    <header class="header-container">
+        <div class="logo-section">
+            <img class="dinhdanganh" src="media/highlands-coffee-cream-logo.webp" alt="Highland Coffee Logo">
+            <h1>HIGHLANDS COFFEE</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="trangchu.html">TRANG CHỦ</a></li>
+                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                <li>
+                    <a href="menu.html">MENU</a>
+                    <ul class="submenu">
+                        <li><a href="#coffee">Cà Phê</a></li>
+                        <li><a href="#chocolate">Trà Highlands</a></li>
+                        <li><a href="#frappuccino">Freeze</a></li>
+                        <li><a href="#tea">Food Menu</a></li>
+                    </ul>
+                </li>
+                <li><a href="nghenghiep.html">NGHỀ NGHIỆP</a></li>
+                <li><a href="the.html">THẺ</a></li>
+                <li><a href="dangnhap.php">ĐĂNG NHẬP</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class="menu">
-        <ul>
-            <li><a href="trangchu.html">TRANG CHỦ</a></li>
-            <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
-            <li>
-                <a href="menu.html">MENU</a>
-                <ul class="submenu">
-                    <li>
-                        <a href="#coffee">Cà Phê</a>
-                    </li>
-                    <li>
-                        <a href="#chocolate">Trà Highlands</a>
-                    </li>
-                    <li>
-                        <a href="#frappuccino">Freeze</a>
-                    </li>
-                    <li>
-                        <a href="#tea">Food Menu</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="nghenghiep.html">NGHỀ NGHIỆP</a></li>
-            <li><a href="the.html">THẺ</a></li>
-        </ul>
-    </nav>
-    <div class="dinhdang1">
+    <div class="content">
         <section id="home">
             <h2>Chào Mừng đến với Highland Coffee</h2>
             <h4>Highland Coffee là nơi mang đến cho bạn những ly cà phê thơm ngon và không gian thư giãn.</h4>
         </section>
         <div class="video-container">
             <video controls autoplay loop muted>
-                <source src="c:\Users\ADMIN\Downloads\HIGHLANDS COFFEE® _ CỘNG ĐỒNG LÀ_ TÌNH THÂN - TƯƠNG TRỢ.mp4" type="video/mp4">
+                <source src="media/HIGHLANDS COFFEE® _ CỘNG ĐỒNG LÀ_ TÌNH THÂN - TƯƠNG TRỢ.mp4" type="video/mp4">
                 Trình duyệt của bạn không hỗ trợ video.
             </video>
         </div>

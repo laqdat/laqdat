@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav {
+    background-color: #333;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #575757;
+}
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    list-style-type: none;
+    z-index: 1000;
+    white-space: nowrap;
+}
+nav ul li:hover ul.submenu {
+    display: flex;
+}
+nav ul li ul.submenu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid #444;
+}
+nav ul li ul.submenu li:last-child {
+    border-right: none;
+}
+nav ul li ul.submenu li a {
+    padding: 10px 0;
+    display: block;
+}
+nav ul li ul.submenu li img {
+    width: 80px;
+    height: 80px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+.register-container {
+    max-width: 300px;
+    margin: 50px auto; /* Căn giữa */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.register-container h1 {
+    color: #8B0000; /* Màu tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+.form-group {
+    margin-bottom: 15px;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Đặt chiều rộng 100% cho ô nhập */
+    padding: 10px; /* Khoảng cách bên trong ô nhập */
+    border: 1px solid #ccc; /* Đường viền cho ô nhập */
+    border-radius: 5px; /* Bo góc cho ô nhập */
+    box-sizing: border-box; /* Bao gồm padding và border vào chiều rộng */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a70000;
+}
+.dinhdanganh{
+    width: 100px;
+    height: 80px;
+}

@@ -19,6 +19,7 @@
         <a href="menu.html">MENU</a>
         <a href="nghenghiep.html">NGHỀ NGHIỆP</a>
         <a href="the.html">THẺ</a>
+        <a href="dangnhap.php">ĐĂNG NHẬP</a>
     </nav>
 
     <div class="container">
@@ -195,3 +196,19 @@
   <!-- Footer -->
 </body>
 </html>
+<script>
+  // Thêm sự kiện khi người dùng nhấn nút xác nhận
+  document.querySelector('.section button').onclick = function() {
+      const senderName = document.querySelector('input[placeholder="Tên người gửi *"]').value;
+      const senderEmail = document.querySelector('input[placeholder="Email người gửi *"]').value;
+      const senderPhone = document.querySelector('input[placeholder="Số điện thoại người gửi *"]').value;
+      const recipientName = document.querySelector('input[placeholder="Tên người nhận *"]').value;
+      const recipientEmail = document.querySelector('input[placeholder="Email người nhận"]').value;
+      const recipientPhone = document.querySelector('input[placeholder="Số điện thoại người nhận *"]').value;
+      const message = document.querySelector('textarea').value;
+
+      // Chuyển đến trang xác nhận với các thông tin
+      window.location.href = `confirm_order.html?senderName=${encodeURIComponent(senderName)}&senderEmail=${encodeURIComponent(senderEmail)}&senderPhone=${encodeURIComponent(senderPhone)}&recipientName=${encodeURIComponent(recipientName)}&recipientEmail=${encodeURIComponent(recipientEmail)}&recipientPhone=${encodeURIComponent(recipientPhone)}&message=${encodeURIComponent(message)}`;
+  };
+</script>
+

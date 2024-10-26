@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Nhận Đặt Hàng</title>
+    <link rel="stylesheet" type="text/css" href="css/the.css">
+</head>
+<body>
+    <header>
+        <h1>Xác Nhận Đặt Hàng</h1>
+    </header>
+
+    <div class="container">
+        <h2>Thông Tin Đặt Hàng</h2>
+        <p>Tên người gửi: <span id="senderName"></span></p>
+        <p>Email người gửi: <span id="senderEmail"></span></p>
+        <p>Số điện thoại người gửi: <span id="senderPhone"></span></p>
+        <p>Tên người nhận: <span id="recipientName"></span></p>
+        <p>Email người nhận: <span id="recipientEmail"></span></p>
+        <p>Số điện thoại người nhận: <span id="recipientPhone"></span></p>
+        <p>Lời nhắn: <span id="message"></span></p>
+        <button id="confirmButton">Xác Nhận Đặt Hàng</button>
+    </div>
+
+    <script>
+        // Giả sử bạn đã truyền thông tin người dùng qua URL
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('senderName').innerText = urlParams.get('senderName');
+        document.getElementById('senderEmail').innerText = urlParams.get('senderEmail');
+        document.getElementById('senderPhone').innerText = urlParams.get('senderPhone');
+        document.getElementById('recipientName').innerText = urlParams.get('recipientName');
+        document.getElementById('recipientEmail').innerText = urlParams.get('recipientEmail');
+        document.getElementById('recipientPhone').innerText = urlParams.get('recipientPhone');
+        document.getElementById('message').innerText = urlParams.get('message');
+
+        document.getElementById('confirmButton').onclick = function() {
+            // Gửi thông tin đặt hàng tới server
+            fetch('order.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    senderName: urlParams.get('senderName'),
+                    senderEmail: urlParams.get('senderEmail'),
+                    senderPhone: urlParams.get('senderPhone'),
+                    recipientName: urlParams.get('recipientName'),
+                    recipientEmail: urlParams.get('recipientEmail'),
+                    recipientPhone: urlParams.get('recipientPhone'),
+                    message: urlParams.get('message'),
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('Đặt hàng thành công!');
+                window.location.href = 'trangchu.html'; // Chuyển về trang chính
+            })
+            .catch(error => {
+                alert('Có lỗi xảy ra! Vui lòng thử lại.');
+            });
+        };
+    </script>
+</body>
+</html>
