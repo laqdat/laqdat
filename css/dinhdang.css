@@ -92,7 +92,7 @@ body {
     text-align: center;
 }
 .product img {
-    width: 100%;
+    width: 100px;
     height: auto;
 }
 .product h3 {
@@ -129,4 +129,10 @@ footer .form-outline input {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 8px;
+}
+.dinhdanganh2 {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    border: 1px solid #000;
 }

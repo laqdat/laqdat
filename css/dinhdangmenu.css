@@ -128,15 +128,6 @@ nav ul li ul.submenu li img {
 .menu-item button:hover {
     background-color: #a50000;
 }
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
 .gia{
     color:#333;
 }

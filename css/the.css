@@ -47,6 +47,8 @@ nav a {
 }
 nav a:hover {
     background-color: #b51f24;
+    text-decoration: none;
+    color: white;   
 }
 .header img {
     width: 100%;

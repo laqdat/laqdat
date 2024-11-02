@@ -46,169 +46,173 @@
         <div class="section">
             <h2>CHỌN MẪU THẺ</h2>
             <div class="card-options">
-                <img src="media/mauthe1.webp" alt="Mẫu thẻ 1">
-                <img src="media/mauthe2.webp" alt="Mẫu thẻ 2">
-                <img src="media/mauthe3.webp" alt="Mẫu thẻ 3">
-                <img src="media/mauthe4.webp" alt="Mẫu thẻ 4">
+                <img src="media/mauthe1.webp" alt="Mẫu thẻ 1" onclick="chooseCard('Mẫu thẻ 1')">
+                <img src="media/mauthe2.webp" alt="Mẫu thẻ 2" onclick="chooseCard('Mẫu thẻ 2')">
+                <img src="media/mauthe3.webp" alt="Mẫu thẻ 3" onclick="chooseCard('Mẫu thẻ 3')">
+                <img src="media/mauthe4.webp" alt="Mẫu thẻ 4" onclick="chooseCard('Mẫu thẻ 4')">
             </div>
             <h3>Giá trị Thẻ Highlands Coffee</h3>
-            <button>100,000 VND</button>
-            <button>200,000 VND</button>
-            <button>500,000 VND</button>
-            <button>1,000,000 VND</button>
+            <button onclick="selectValue(100000)">100,000 VND</button>
+            <button onclick="selectValue(200000)">200,000 VND</button>
+            <button onclick="selectValue(500000)">500,000 VND</button>
+            <button onclick="selectValue(1000000)">1,000,000 VND</button>
         </div>
 
         <div class="section">
             <h2>THÔNG TIN NGƯỜI GỬI</h2>
-            <input type="text" placeholder="Tên người gửi *">
-            <input type="email" placeholder="Email người gửi *">
-            <input type="tel" placeholder="Số điện thoại người gửi *">
-            
-            <h2>THÔNG TIN NGƯỜI NHẬN</h2>
-            <input type="checkbox"> Tôi muốn tặng chính mình<br>
-            <input type="text" placeholder="Tên người nhận *">
-            <input type="email" placeholder="Email người nhận">
-            <input type="tel" placeholder="Số điện thoại người nhận *">
-            
-            <h2>LỜI BẠN MUỐN NHẮN NHỦ ĐẾN NGƯỜI NHẬN</h2>
-            <textarea placeholder="Điền nội dung tại đây" maxlength="255" rows="4"></textarea><br>
-            
-            <button>Xác Nhận</button>
-        </div>
-        <div class="business-solutions">
-            <h2>GIẢI PHÁP DOANH NGHIỆP</h2>
-            <img src="media/giaiphapdoanhnghiep.webp" alt="Giải pháp doanh nghiệp">
-            <button>Liên Hệ</button>
-        </div>
-        <div class="faq">
-            <h2>FAQS</h2>
-            <h3>Tôi có thể đăng ký thẻ Highlands Coffee để tặng người thân được không ?</h3>
-            <p>Bạn có thể tặng bất cứ thẻ Highlands Coffee nào cho người thân khi đăng ký qua website card.highlandscoffee.com.vn. Hãy nhớ gửi một lời chúc thật dễ thương nhé!</p>
-            
-            <h3>+ Làm thế nào để tôi sử dụng được thẻ đã đăng ký?</h3>
-            <p>[...]</p>
-            <h3>+ Tôi phải làm gì nếu không nhận được tin nhắn SMS?</h3>
-            <p>[...]</p>
-            <h3>+ Tôi có thể đổi Thẻ Highlands Coffee lấy tiền mặt được không?</h3>
-            <p>[...]</p>
-            <h3>+ Thời hạn kích hoạt thẻ Highlands Coffee đăng ký qua website là bao lâu?</h3>
-            <p>[...]</p>
+            <form action="confirm.php" method="POST">
+                <input type="hidden" name="card_design" id="card_design">
+                <input type="hidden" name="card_value" id="card_value">
+                <input type="text" name="sender_name" placeholder="Tên người gửi *" required>
+                <input type="email" name="sender_email" placeholder="Email người gửi *" required>
+                <input type="tel" name="sender_phone" placeholder="Số điện thoại người gửi *" required>
+
+                <h2>THÔNG TIN NGƯỜI NHẬN</h2>
+                <input type="checkbox" id="gift_self"> Tôi muốn tặng chính mình<br>
+                <input type="text" name="receiver_name" placeholder="Tên người nhận *" required>
+                <input type="email" name="receiver_email" placeholder="Email người nhận">
+                <input type="tel" name="receiver_phone" placeholder="Số điện thoại người nhận *" required>
+
+                <h2>LỜI BẠN MUỐN NHẮN NHỦ ĐẾN NGƯỜI NHẬN</h2>
+                <textarea name="message" placeholder="Điền nội dung tại đây" maxlength="255" rows="4"></textarea><br>
+
+                <button type="submit">Xác Nhận</button>
+            </form>
         </div>
     </div>
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Theo dõi chúng tôi trên các diễn đàn xã hội:</span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Highlands Coffee
-            </h6>
-            <p>
-                Thẻ Highlands Coffee với thiết kế tinh tế, sử dụng dễ dàng - là món quà nhỏ bé để bạn trao tay người thương thay vạn lời muốn nói.
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Highlands's Gift Card
-            </h6>
-            <p>
-              <a  class="text-reset">Về thẻ Highlands Coffee</a>
-            </p>
-            <p>
-              <a  class="text-reset">Bộ sưu tập thẻ</a>
-            </p>
-            <p>
-              <a  class="text-reset">Chính sách</a>
-            </p>
-            <p>
-              <a  class="text-reset">Hỗ trợ</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Liên Hệ</h6>
-            <p><i class="fas fa-home me-3"></i> 135/37/50 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              customerservice@highlandscoffee.com.vn
-            </p>
-            <p><i class="fas fa-phone me-3"></i>19001755</p>
-          </div>
-          <!-- Grid column -->
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Highlands Coffee
+          </h6>
+          <p>
+            Thẻ Highlands là một sự lựa chọn tuyệt vời để làm quà cho người thân trong các dịp đặc biệt, với các ưu đãi dành riêng cho chủ thẻ.
+          </p>
         </div>
-        <!-- Grid row -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Liên hệ</h6>
+          <p><i class="fas fa-home me-3"></i>125-127 Nguyễn Cơ Thạch, phường An Lợi Đông, Quận 2, TP Hồ Chí Minh.</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>customerservice@highlandscoffee.com.vn
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
       </div>
-    </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright: Công ty cổ phần dịch vụ và cà phê Cao Nguyên
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+    <script>
+        let selectedCard = "";
+        let selectedValue = 0;
+
+        function chooseCard(card) {
+            selectedCard = card;
+            document.getElementById("card_design").value = card;
+        }
+
+        function selectValue(value) {
+            selectedValue = value;
+            document.getElementById("card_value").value = value;
+        }
+    </script>
 </body>
 </html>
-<script>
-  // Thêm sự kiện khi người dùng nhấn nút xác nhận
-  document.querySelector('.section button').onclick = function() {
-      const senderName = document.querySelector('input[placeholder="Tên người gửi *"]').value;
-      const senderEmail = document.querySelector('input[placeholder="Email người gửi *"]').value;
-      const senderPhone = document.querySelector('input[placeholder="Số điện thoại người gửi *"]').value;
-      const recipientName = document.querySelector('input[placeholder="Tên người nhận *"]').value;
-      const recipientEmail = document.querySelector('input[placeholder="Email người nhận"]').value;
-      const recipientPhone = document.querySelector('input[placeholder="Số điện thoại người nhận *"]').value;
-      const message = document.querySelector('textarea').value;
-
-      // Chuyển đến trang xác nhận với các thông tin
-      window.location.href = `confirm_order.html?senderName=${encodeURIComponent(senderName)}&senderEmail=${encodeURIComponent(senderEmail)}&senderPhone=${encodeURIComponent(senderPhone)}&recipientName=${encodeURIComponent(recipientName)}&recipientEmail=${encodeURIComponent(recipientEmail)}&recipientPhone=${encodeURIComponent(recipientPhone)}&message=${encodeURIComponent(message)}`;
-  };
-</script>
-
